@@ -49,8 +49,7 @@ public class GerenciamentoDeProcesso {
                 Processo processo = prontos.remove(0);
                 processo.processar();
                
-                double i =  Math.random();
-              
+                double i =  Math.random();              
                 if(i > (chanceBloqueado/100) ){                    
                     setarPronto(processo,prontos);
                 }
