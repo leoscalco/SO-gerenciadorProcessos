@@ -20,7 +20,7 @@ public class GerenciamentoDeProcesso {
     static long quantum = 1000;
     static int n = 3;
     static long delay = 2500;
-    static double chanceBloqueado = 50;
+    static double chanceBloqueado = 90;
     static double chanceBloqueadoParaPronto = 50;
     
     
@@ -39,7 +39,7 @@ public class GerenciamentoDeProcesso {
        while(true){
            if(!bloqueados.isEmpty()){
               double i = Math.random();
-              if(i > (chanceBloqueadoParaPronto/100)){
+              if(i <= (chanceBloqueadoParaPronto/100)){
                   setarPronto(bloqueados.remove(0), prontos);
               }
           
@@ -62,7 +62,8 @@ public class GerenciamentoDeProcesso {
           }
           
           
-            Thread.sleep(delay);            
+            Thread.sleep(delay);
+            System.out.println("");
        } 
     
   }
